@@ -16,9 +16,9 @@ function checkNumber() {
   if (optionPositive) {
   const randomNumber = Math.floor(Math.random() * 6) + 1
     document.getElementById('result').innerHTML =
-      '<p>You guessed the right number!</p>'
   }
   else{
     const randomNumber = Math.floor(Math.random() * -6) + 1
   }
 }
+  '<p>You guessed the right number!</p>'
