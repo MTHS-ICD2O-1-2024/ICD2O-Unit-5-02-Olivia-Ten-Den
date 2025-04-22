@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<!-- ICS2O-Unit5-01-HTML-JS -->
+<!-- ICS2O-Unit5-02-HTML-JS -->
 <html lang="en-ca">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Random number guess, with JS" />
+  <meta name="description" content="Positive or Negative Number, with JS" />
   <meta name="keywords" content="mths, icd2o" />
   <meta name="author" content="Olivia TD" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
   <link rel="manifest" href="./site.webmanifest" />
-  <title>Random number guess, with JS</title>
+  <title>Positive or Negative Number, with JS</title>
 </head>
 
 <body>
@@ -24,35 +24,36 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Random number guess, with JS</span>
+        <span class="mdl-layout-title">Positive or Negative Number, with JS</span>
       </div>
     </header>
     <main class="mdl-layout__content">
       <div class="right-image">
-        <img src="./images/dice.gif" alt="GIF of a die witha flag coming out of it.." />
+        <img src="./images/positive_negative.jpg" alt="Image: Different colored blocks with single digit positive or negative numbers on them." />
       </div>
-      <div class="page-content">Pick a number between 1 and 6.</div>
+      <div class="page-content">Select what kind of number you would like.</div>
       <br />
       <form>
-        <div class="mdl-textfield mdl-js-textfield">
-          <!-- input pattern attribute -->
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="user-number" />
-          <!-- mdl-textfield__label -->
-          <label class="mdl-textfield__label" for="user-number">Enter number here...</label>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number.</span>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-positive">
+          <input type="radio" id="option-positive" class="mdl-radio_button" name="kind-of-number" checked>
+          <span class="mdl-radio_label">Positive</span>
+        </label>
         </div>
+        <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-negative">
+          <input type="radio" id="option-negative" class="mdl-radio_button" name="kind-of-number">
+          <span class="mdl-radio_label">Negative</span>
+        </label>
         <br />
         <br />
         <!-- Accent-colored raised button with ripple -->
         <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="checkNumber()" type="button">
-          Check!
+          onclick="generateNumber()" type="button">
+          Generate!
         </button>
       </form>
       <br />
       <div class="page-content-answer">
-        <div id="result"></div>
+        <div id="answer"></div>
       </div>
     </main>
   </div>
