@@ -6,19 +6,18 @@
 
 "use strict"
 
-const optionPostive = document.getElementById('option-positive').checked
+const randomNumber = Math.floor(Math.random() * 6) + 1;
+let optionPositive = document.getElementById('option-positive');
+let optionNegative = document.getElementById('option-negative');
 
 function checkNumber() {
-  // input
-  const userNumber = parseInt(document.getElementById('user-number').value)
-
   // process
-  if (optionPositive) {
-  const randomNumber = Math.floor(Math.random() * 6) + 1
-    document.getElementById('result').innerHTML =
+  if (optionPositive.checked) {
+    //Do nothing
   }
-  else{
-    const randomNumber = Math.floor(Math.random() * -6) + 1
+  else if (optionNegative.checked){
+    randomNumber = randomNumber * -1;
   }
+  document.getElementById('result').innerHTML = "<p>The random number is " + randomNumber + ".</p>";
 }
-  '<p>You guessed the right number!</p>'
+
