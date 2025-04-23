@@ -34,19 +34,20 @@
       <div class="page-content">Select what kind of number you would like.</div>
       <br />
       <form>
-        <label class="mdl-radio" for="option-positive">
-          <input type="radio" id="option-positive" class="mdl-radio_button" name="kind-of-number" checked>
-          <span class="mdl-radio_label">Positive</span>
-        </label>
-        <label class="mdl-radio" for="option-negative">
-          <input type="radio" id="option-negative" class="mdl-radio_button" name="kind-of-number">
-          <span class="mdl-radio_label">Negative</span>
-        </label>
-        <!-- Accent-colored raised button with ripple -->
+        <div>
+          <label class="mdl-radio" for="positive">
+            <input type="radio" id="positive" class="mdl-radio_button" name="kind-of-number" checked>
+            <span class="mdl-radio_label">Positive</span>
+          </label>
+          <label class="mdl-radio" for="negative">
+            <input type="radio" id="negative" class="mdl-radio_button" name="kind-of-number">
+            <span class="mdl-radio_label">Negative</span>
+          </label>
+        </div>
         <div>
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
             onclick="checkNumber()" type="button">
-            Generate!
+            Generate
           </button>
         </div>
       </form>
