@@ -7,13 +7,16 @@
 "use strict"
 
 function checkNumber() {
+  // process
   let randomNumber = Math.floor(Math.random() * 10) + 1;
 
   if (document.getElementById('positive').checked) {
-    //Do nothing
+    // do nothing
   }
   else {
+    // process
     randomNumber = randomNumber * -1;
   }
+  // output
   document.getElementById('result').innerHTML = "<p>The random number is " + randomNumber + ".</p>";
 }
