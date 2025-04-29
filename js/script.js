@@ -12,7 +12,7 @@ function checkNumber() {
   if (document.getElementById('positive').checked) {
     //Do nothing
   }
-  else if (document.getElementById('negative').checked) {
+  else {
     randomNumber = randomNumber * -1;
   }
   document.getElementById('result').innerHTML = "<p>The random number is " + randomNumber + ".</p>";
